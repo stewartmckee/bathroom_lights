@@ -10,9 +10,9 @@
       e.preventDefault();
       var url = ""
       if ($(this).hasClass("on")) {
-        url = "http://localhost:4567/on"
+        url = "/on"
       } else {
-        url = "http://localhost:4567/off"
+        url = "/off"
       }
 
       $.ajax( {
