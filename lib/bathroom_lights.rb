@@ -1,5 +1,6 @@
 require "bathroom_lights/version"
+require "bathroom_lights/server"
 
 module BathroomLights
-  # Your code goes here...
+
 end

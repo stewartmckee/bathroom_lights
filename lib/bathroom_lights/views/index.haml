@@ -1,0 +1,26 @@
+.jumbotron
+  %h1 Bathroom Lights
+  %br
+  %a.btn.btn-large.btn-success.on Turn On
+  %a.btn.btn-large.btn-success.off Turn Off
+
+  :javascript
+
+    $(".btn").click(function(e) {
+      e.preventDefault();
+      var url = ""
+      if ($(this).hasClass("on")) {
+        url = "http://localhost:4567/on"
+      } else {
+        url = "http://localhost:4567/off"
+      }
+
+      $.ajax( {
+        type: "GET",
+        url: url,
+        success:  function() {
+          console.log("success")
+        }
+      })
+
+    })
